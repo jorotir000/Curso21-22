@@ -1,0 +1,31 @@
+/*
+    Crea ahora un pequeño programa en Java que defina un enumerado con los nombres de las provincias de la comunidad autónoma de 
+    Andalucía: ALMERIA, CADIZ, CORDOBA, GRANADA, etc. para posteriormente mostrar por pantalla cada valor del enumerado declarado.
+*/
+package programacion2021.pkg22;
+
+/**
+ *
+ * @author joseoropesatirado
+ */
+public class Ejercicio1 {
+
+    
+    public enum NombreProvincias {ALMERIA, CADIZ, CORDOBA, GRANADA, HUELVA, JAEN, MALAGA, SEVILLA }; // Creo un enum llmado NombreProvincias
+    
+    public static void main(String[] args) {
+        
+        int contador=1; // Creo una variable que me sirva de contador. Se podría utilizar un bucle if para que lo hiciera automaticamente 
+        
+        System.out.println("Provincia "+contador+": "+NombreProvincias.ALMERIA); //Utilizamos las concatenaciones
+        System.out.println("Provincia "+(contador+2)+": "+NombreProvincias.CADIZ);
+        System.out.println("Provincia "+(contador+2)+": "+NombreProvincias.CORDOBA);
+        System.out.println("Provincia "+(contador+3)+": "+NombreProvincias.GRANADA);
+        System.out.println("Provincia "+(contador+4)+": "+NombreProvincias.HUELVA);
+        System.out.println("Provincia "+(contador+5)+": "+NombreProvincias.JAEN);
+        System.out.println("Provincia "+(contador+6)+": "+NombreProvincias.MALAGA);
+        System.out.println("Provincia "+(contador+7)+": "+NombreProvincias.SEVILLA);
+        
+    }
+    
+}
