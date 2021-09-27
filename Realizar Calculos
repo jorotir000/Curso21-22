@@ -1,0 +1,55 @@
+/*
+    Escribe un programa en Java que solicite dos números reales y lleve a cabo los siguientes cálculos:
+        el triple del primer número,
+        la décima parte del segundo número,
+        el cuadrado del doble del producto de ambos números,
+        la mitad del cuadrado de la suma de ambos números.
+ */
+package programacion2021.pkg22;
+
+import java.util.Scanner; // Importamos la clase Scanner para solicitar números por teclado. Se realizara debajo del paquete
+
+/**
+ *
+ * @author joseoropesatirado
+ */
+public class Ejercicio2 {
+    
+    public static void main(String[] args) {
+        
+        System.out.println("CÁLCULOS ARITMÉTICOS");
+        System.out.println("-------------------------");
+        
+        Scanner miNumero = new Scanner(System.in); //Utilizamos la clase Scanner a la que llamaremos miNumero 
+        
+        System.out.println("Introduzca dos números reales:");
+        
+        double n1; //Creo una variable de tipo double llamada n1
+        
+        System.out.print("Primero número: "); // Utilizo System.out.print para que quede en la misma línea
+        n1=miNumero.nextInt(); //Almaceno el valor de la clase miNumero en la variable n1
+              
+        double n2; //Creo una segunda variable para el segundo numero
+        
+        System.out.print("Segundo número: ");
+        n2=miNumero.nextInt();
+        
+        System.out.println("\n"); //Realizo un salto de linea
+        
+        System.out.println("RESULTADO");
+        System.out.println("-------------------------");
+        
+        System.out.println("Triple del primer número: "+n1*3);
+        System.out.println("Decima parte del segundo numero "+n2/10);
+       
+        double cuadradoNumero=(n1*n2)*2; // Creo una variable que me calcule el doble del producto de ambos.
+        System.out.println("Cuadrado del doble del producto de ambos numeros: "+(cuadradoNumero*cuadradoNumero)); // Una vez calculado el doble del producto calculo el cuadrado
+        
+        
+        double sumaNumero=n1+n2;
+        
+        System.out.println("Mitad del cuadrado de la suma de ambos numeros: "+ Math.pow((n1+n2),2)/2); //En este caso para cambiar y practicar he utilizado la clase Math.pow para calcular el cuadrado de la suma de los numeros
+        
+    }
+    
+}
