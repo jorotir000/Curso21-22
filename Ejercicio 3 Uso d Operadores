@@ -1,0 +1,51 @@
+/*
+    
+    Escribe un programa en Java que solicite un número entero (sin decimales) y lo analice averiguando lo siguiente:
+        - si es distinto de cero,
+        - si es negativo,
+        - si está entre cero y diez, ambos incluidos,
+        - si es un múltiplo de tres, positivo y menor que veinte.
+
+ */
+package programacion2021.pkg22;
+
+import java.util.Scanner; //Importo el paquete para el uso de la clase Scanner
+
+/**
+ *
+ * @author joseoropesatirado
+ */
+public class Ejercicio3 {
+    
+    public static void main (String args[]){
+        
+        
+        boolean resultado; // Creo una variable que calculara el resultado.
+        
+        System.out.println("ANALISIS DE UN NUMERO");
+        System.out.println("-------------------------");
+        
+        Scanner miEntrada = new Scanner(System.in); // LLamamos a la clase Scanner
+        System.out.println("Introduzca un numero:");
+        int n1=miEntrada.nextInt(); //Almaceno el valor de la variable miEntrada en una variable de tipo entero llamada n1
+        
+        System.out.println("\n"); //realizo un salto de linea
+        System.out.println("RESULTADO");
+        System.out.println("-------------------------");
+        
+        resultado =(n1!=0); //Utilizamos el operador != distinto de..
+        System.out.println("El numero "+n1+ " es distinto de 0: "+resultado);
+        
+        resultado =n1<0; // Aqui hemos utilizado el operador menor que
+        System.out.println("El numero "+n1 +" es negativo: "+resultado);
+        
+        resultado =n1>=0 && n1<=10; // Aqui hemos utilizado el operador mayor o igual que cero y que cumpla tambien que n1 sea menor o igual a 10
+        System.out.println("El numero "+n1 +" esta entre 0 y 10 (ambos incluidos): "+resultado);
+        
+        resultado = n1%3==0 && n1>0 && n1<=20;
+        System.out.println("El numero "+n1 + " es multiplo de tres, positivo y menor que veinte: "+resultado);
+        
+        
+    }
+    
+}
