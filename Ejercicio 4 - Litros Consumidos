@@ -1,0 +1,44 @@
+/*
+    Un vehículo realiza un trayecto en dos etapas: en la primera etapa se consume la mitad del combustible contenido en el depósito 
+    del vehículo mientras que en la segunda consumirá el 25% de lo que quede en el depósito.
+
+    Escribe un programa en Java que pida la cantidad de litros iniciales con los que se rellena el depósito del vehículo 
+    y calcule cuántos litros se consumen en cada uno de los trayectos, así como cuántos litros quedarán en el depósito una vez 
+    finalizados ambos trayectos.
+ */
+package programacion2021.pkg22;
+
+import java.util.*; //Importamos el paquete java.util que contiene la clase Scanner
+
+/**
+ *
+ * @author joseoropesatirado
+ */
+public class Ejercicio4 {
+    
+    public static void main (String args []){
+        
+        
+        Scanner miEntrada = new Scanner (System.in); // Utilizamos la clase Scanner llamada miEntrada
+        
+        System.out.println("TRAYECTO EN DOS ETAPAS");
+        System.out.println("--------------------------------");
+        System.out.println("Introduzca la cantidad inicial de litros que se introducen en el deposito del vehiculo: ");
+        double litros = miEntrada.nextDouble(); //Almaceno el valor de la clase miEntrada en la variable litros
+        
+        System.out.println("\n");
+        System.out.println("RESULTADO");
+        System.out.println("--------------------------------");
+        
+        double primerRecorrido=litros/2; //Para calcular la mitad divido los litros entre 2 y lo almaceno en una variable llamada primerRecorrido
+        System.out.println("Litros consumido en el primer recorrido: "+primerRecorrido);
+        
+        double segundoRecorrido=(primerRecorrido*25)/100; // Para calcular el 25% multiplicamos el primer recorrido por 25 y dividimos entre 100 y la almacenamos en una nueva variable
+        System.out.println("Litros consumido en el segundo recorrido: "+segundoRecorrido);
+        
+        double litrosRestantes=litros-(primerRecorrido+segundoRecorrido); // Para calcular los litros restantes sumamos los dos recorridos y lo restamos al numero de litros introducidos
+        System.out.println("Litros sobrantes en el deposito: "+litrosRestantes);
+        
+    }
+    
+}
