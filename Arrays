@@ -1,0 +1,39 @@
+package practicar.ejercicios.del.tema;
+
+import java.util.*;
+
+/**
+ *
+ * @author joseoropesatirado
+ */
+public class PracticarEjerciciosDelTema {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        Scanner miEntrada = new Scanner(System.in);
+        
+        int entrada =0; //Creo la variable donde almacenare el valor introducido por teclado
+        int suma=0; // Creo una variable auxiliar
+        
+        System.out.print("Introduce la cantidad de elementos: ");
+        entrada=miEntrada.nextInt();
+        
+        int miArray []= new int[entrada]; // Declaro un array de tipo int
+        
+        for (int i=0; i<=miArray.length -1; i++){ // Declaro un bucle for que recorrera el array
+            
+            
+            miArray[i]=i; // Inicio el array
+            
+            suma = miArray[i] + miArray[i]; //Almaceno en la variable suma el resultado del array recorrido y lo sumo
+            
+            System.out.println("Elemento "+i+": "+ suma +" ");
+            
+        }
+        
+    }
+}
